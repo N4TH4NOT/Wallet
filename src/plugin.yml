@@ -1,0 +1,25 @@
+name: Wallet
+main: me.n4th4not.wallet.Main
+version: 1.0
+author: N4TH4NOT
+api-version: 1.16
+description: Eliaze private plugin
+
+commands:
+  wallet:
+    usage: /wallet <give <amount>|transfert [<player|bank> <name>]|clear [amount]>
+    description: Admin command to manage the wallet
+
+permissions:
+  eliaze.wallet.give:
+    default: false
+    description: Allow to give monay into to wallet of any player
+  eliaze.wallet.transfert.players:
+    default: false
+    description: Allow to transfert the wallet money of any player to an other player
+  eliaze.wallet.transfert.banks:
+    default: false
+    description: Allow to transfert the wallet money of any player to any bank
+  eliaze.wallet.clear:
+    default: false
+    description: Allow to withdraw a certain amount or all the money into any player wallet
