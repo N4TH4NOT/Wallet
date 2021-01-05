@@ -1,0 +1,39 @@
+log: true
+wallet:
+  slot: 10
+  icon:
+    material: CHEST
+    # %%0 = wallet level
+    # %%1 = money
+    # %%2 = free_space
+    # %%3 = total_space
+    name: "&4Wallet (level %%0)"
+    description:
+      - "&7You have %%1 ecus"
+      - "&7Still store %%2/%%3 coins"
+money:
+  stack-size: 64
+  icon:
+    material: EMERALD
+    name: "&21 Ecus"
+    description:
+      - "&7The unmissable money of Eliaze"
+# Sort by ceiling to determine the level
+levels:
+  no:
+    ceiling: 10
+  matter:
+    ceiling: 25
+    price: 50
+  name:
+    ceiling: 40
+    price: 100
+  you:
+    ceiling: 65
+    price: 200
+  give:
+    ceiling: 80
+    price: 300
+  them:
+    ceiling: 150
+    price: 500

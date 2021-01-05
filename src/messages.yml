@@ -1,0 +1,361 @@
+# wallet_cannot_be_give_chat
+'00': '&cFree up space in your inventory to get your wallet and try again !'
+
+# wallet_cannot_be_give_title_up
+'01': '&4Wallet'
+
+# wallet_cannot_be_give_title_down
+'02': '&cFree up space and try again'
+
+# wallet_given_chat
+'03': '&aYour receive the wallet button in your inventory !'
+
+# wallet_given_title_up
+'04': '&2Wallet'
+
+# wallet_given_title_down
+'05': '&aButton received'
+
+# wallet_removed_chat
+'06': '&cYour wallet button was been removed !'
+
+# wallet_removed_title_up
+'07': '&4Wallet'
+
+# wallet_removed_title_down
+'08': '&cButton removed'
+
+# wallet_limit_reach
+'09': '&c&oYou reach the maximum capacity of your wallet, deposit on your account or upgrade !'
+
+# coins_drop_cancelled_title_up
+0A: ''
+
+# coins_drop_cancelled_title_down
+0B: '&cYou can not drop coins here!'
+
+# command_only_for_players
+0C: '&4This command can only used by a player!'
+
+# command_wallet_useless_without_wallet
+0D: '&cThis command without arguments is useless because you have permission to not have a wallet.'
+
+# command_wallet_refresh_delay
+0E: '&cYou can not use again the command, please wait and try again later...'
+
+# do_not_have_permission_to_use
+0F: '&cYou do not have the permission to use ''&e%%0&c'' argument.'
+
+# player_not_found
+# %%0 = input
+10: '&cPlayer ''&e%%0&c'' was not found.'
+
+# deny_negative_number
+11: '&cNumber can not be negative !'
+
+# targeted_wallet_is_full
+# %%0 = player name
+# %%1 = player uuid
+12: '&cThe targeted wallet is full.'
+
+# given_coins
+# %%0 = target name
+# %%1 = target uuid
+# %%2 = coin amount
+13: '&eYou gave &6%%2 coins&e to %%0&e.'
+
+# received_coins_with_command
+# %%0 = executor nickname
+# %%1 = coin amount
+14: '&e%%0 give you &6%%1 coins&e.'
+
+# commands_wrong_number_input
+# %%0 = input
+15: '&cThis is not a valid number!'
+
+# command_wallet_not_enough_arguments
+16: '&cNot enough arguments, check out with ''help'' at fist argument !'
+
+# targeted_wallet_is_empty
+# %%0 = player name
+# %%1 = player uuid
+17: '&cThe targeted wallet is empty.'
+
+# transferred_coins
+# %%0 = source name
+# %%1 = source uuid
+# %%2 = target name
+# %%3 = target uuid
+# %%4 = amount
+18: '&eYou transfer &6%%4 coins&e from &3%%0&e to &a%%2&e.'
+
+# transferred_source
+# %%0 = executor
+# %%1 = target nickname
+# %%2 = amount
+19: '&e%%0&e transfer &6%%2 coins&e from you to %%1&e.'
+
+# transferred_target
+# %%0 = executor
+# %%1 = source nickname
+# %%2 = amount
+1A: '&e%%0&e transfer &6%%2 coins&e from %%1&e to you.'
+
+# removed_coins
+# %%0 = player name
+# %%1 = player uuid
+# %%2 = amount
+1B: '&eYou removed &6%%2 coins&e from %%0.'
+
+# removed_coins_with_command
+# %%0 = executor nickname
+# %%1 = amount
+1C: '&e%%0&e removed you &6%%1 coins&e.'
+
+# force_deposit_to_his_account
+# %%0 = player name
+# %%1 = player uuid
+# %%2 = amount
+1D: '&eYou forced %%0 to deposit &6%%2 coins&e to his account.'
+
+# forced_deposit_to_account
+# %%0 = executor nickname
+# %%1 = amount
+1E: '&eYou have been forced by %%0 to deposit &6%%1 coins&e to your account.'
+
+# force_deposit_to_account_fail
+# %%0 = player name
+# %%1 = player uuid
+# %%2 = amount
+# %%3 = vault error message
+1F: '&cAn error was occurred when you try to force %%0 to deposit &6%%2 coins&c to his account : &4%%3'
+
+# bank_not_found
+# %%0 = bank name
+20: '&cBank &4%%0&c is not found!'
+
+# player_not_bank_member
+# %%0 = player name
+# %%1 = player uuid
+# %%2 = bank name
+21: '&4%%0&c is not a member of &4%%1&c bank.'
+
+# force_deposit_to_bank
+# %%0 = player name
+# %%1 = player uuid
+# %%2 = bank name
+# %%3 = amount
+22: '&eYou forced %%0 to deposited &6%%3 coins&e to his bank %%2.'
+
+# forced_deposit_to_your_bank
+# %%0 = executor nickname
+# %%1 = bank name
+# %%2 = amount
+23: '&eYou have been forced by %%0 to deposited &6%%2 coins&e to your bank %%1.'
+
+# force_deposit_to_your_bank_fail
+# %%0 = player name
+# %%1 = player uuid
+# %%2 = bank name
+# %%3 = amount
+# %%4 = vault error message
+24: '&cAn error was occurred when you try to force %%0 to deposit &6%%3 coins&c to his bank %%2 : &4%%4'
+
+# command_wallet_wrong_argument
+25: '&cWrong argument, check out white ''help'' at first argument !'
+
+# you_have_deposited_coins
+# %%0 = amount
+26: '&eYou have deposited &6%%0 coins&e to your account.'
+
+# your_deposition_fail
+# %%0 = amount
+# %%1 = vault error message
+27: '&cYou can not deposit coins into your account : &4%%1&c.'
+
+# force_withdraw_from_his_account
+# %%0 = player name
+# %%1 = layer uuid
+# %%2 = amount
+28: '&eYou forced %%0 to withdraw &6%%2 coins&e from his account.'
+
+# forced_withdraw_from_your_account
+# %%0 = executor nickname
+# %%1 = amount
+29: '&eYou have been forced by %%0 to withdrawn &6%%1 coins&e from your account.'
+
+# force_withdraw_from_account_fail
+# %%0 = player name
+# %%1 = player uuid
+# %%2 = amount
+# %%3 = vault error message
+2A: '&cAn error was occurred when you try to force %%0 to withdraw &6%%2 coins&c from his account : &4%%3'
+
+# target_not_have_enough_money
+# %%0 = player name
+# %%1 = player uuid
+# %%2 = remaining coins
+2B: '&4%%0 need&c to have &6%%2 more coins&c to do this.'
+
+# force_withdraw_from_bank
+# %%0 = player name
+# %%1 = player uuid
+# %%2 = bank name
+# %%3 = amount
+2C: '&eYou forced %%0 to withdraw &6%%3 coins&e from his bank %%2.'
+
+# forced_withdraw_from_your_bank
+# %%0 = executor nickname
+# %%1 = bank name
+# %%2 = amount
+2D: '&eYou have been forced by %%0 to withdraw &6%%2 coins&e from your bank %%1.'
+
+# force_withdraw_from_your_bank_fail
+# %%0 = player name
+# %%1 = player uuid
+# %%2 = bank name
+# %%3 = amount
+# %%4 = vault error message
+2E: '&cAn error was occurred when you try to force %%0 to withdraw &6%%3 coins&c from his bank %%2 : &4%%4'
+
+# withdraw
+# %%0 = amount
+2F: '&eYou have withdrawn &6%%0 coins&e from your account.'
+
+# withdraw_fail
+# %%0 = amount
+# %%1 = vault error message
+30: '&cYou can not withdraw coins from your account : &4%%1&c.'
+
+# wallet_already_at_max_level
+# %%0 = max level
+31: '&cYou are already at the maximum level. (%%0)'
+
+# not_enough_money
+# %%0 = remaining
+32: '&cYou need to have &6%%0 more coins&c to do this.'
+
+# wallet_upgraded
+# %%0 = new level
+# %%1 = new size
+33: '&aYou wallet was been successfully upgraded to &2level %%0&a, you can now store &2%%1 coins in total&a!'
+
+# your_reimburse_fail
+34: '&4You could not be reimbursed this should not happen, contact an administrator immediately !'
+
+# wallet_upgrade_permission_fail
+35: '&cYou can not receive the &mpermission to upgraded&c, this should not happen, contact an administrator.'
+
+# wallet_upgrade_payment_fail
+# %%0 = vault error message
+36: '&cAn error occurred during payment, your wallet not been upgraded : &4%%0'
+
+# input_exceeding_wallet_maximum_level
+# %%0 = input
+# %%1 = max level
+37: '&e%%0 exceed wallet maximum level so it was set to %%1.'
+
+# input_not_boolean
+# %%0 = input
+38: '&4%%0&c is not a boolean.'
+
+# targeted_wallet_already_at_max_level
+# %%0 = player name
+# %%1 = player uuid
+# %%2 = max level
+39: '&c%%0 is already at the maximum level. (%%2)'
+
+# cannot_pickup_coins
+3A: '&cYou can not pickup coins for now.'
+
+# wallet_upgraded_for
+# %%0 = player name
+# %%1 = player uuid
+# %%2 = new level
+# %%3 = new size
+3B: '&eYou upgrade the wallet of &c%%0&e to &c%%2 level&e with size of %%3.'
+
+# your_wallet_upgraded_by
+# %%0 = executor nickname
+# %%1 = new level
+# %%2 = new size
+3C: '&eYour wallet was been upgraded by %%0 to &c%%1 level&e with size of %%2.'
+
+# target_reimburse_fail
+# %%0 = player name
+# %%1 = player uuid
+3D: '&4%%0 could not be reimbursed this should not happen !'
+
+# targeted_wallet_upgrade_permission_fail
+# %%0 = player name
+# %%1 = player uuid
+3E: '&c%%0 can not receive the &mpermission to upgraded&c, this should not happen...'
+
+# targeted_wallet_upgrade_payment_fail
+# %%0 = player name
+# %%1 = player uuid
+# %%2 = vault error message
+3F: '&cAn error occurred during payment, %%0''s wallet not been upgraded : &4%%2'
+
+# plugin_reloaded
+40: '&aPlugin have been reloaded!'
+
+# no_wallet_level
+41: '&cYou can not have a wallet, try again with argument ''upgrade''.'
+
+# empty_wallet
+42: "&cYour wallet is empty !"
+
+# full_wallet
+43: "&cYour wallet is full !"
+
+# coins_destroyed
+# %%0 = amount
+44: '&cYou have destroyed %%0 coins. &7Make sure this does not happen too often.'
+
+# bank_not_enough_money
+# %%0 = bank name
+# %%1 = remaining money
+45: '&cBank &4%%0&c need to have &6%%1 coins&c to do this!'
+
+# creative_with_wallet_perm_cannot_get_coins_on_closing_inventory
+46: '&cYou cannot get coins in your inventory !'
+
+# creative_with_wallet_perm_cannot_drop_coins
+47: '&cYou can not drop coins!'
+
+# creative_with_wallet_perm_cannot_break_container_with_coins
+48: '&cThe container has coins so you can not break it!'
+
+# banks_are_not_supported
+49: '&cBanks are not supported!'
+
+# player_already_at_max_level
+# %%0 = player name
+# %%1 = player_uuid
+# %%2 = max level
+4A: '&c%%0 already reach the maximum level (%%2), you can not upgrade him.'
+
+# wallet_downgrade_not_work
+# %%0 = input
+# %%1 = player level
+4B: '&cYou can not downgrade a wallet : remove permission level manually in your permission manager.'
+
+# wallet_level_not_purchasable
+# %%0 = level
+4C: '&cLevel %%0 is not purchasable! Rankup to get the next level !'
+
+# target_already_at_level
+# %%0 = player name
+# %%1 = player uuid
+# %%2 = current level
+4D: '&c%%0 is already at &elevel %%2&c.'
+
+# wallet_remote_upgrade_not_purchasable
+# %%0 = level
+4E: '&cThe level %%0 is not purchasable, if you want to force upgrade, set &4&ouseMoney&c to &4&lfalse&c in your command argument.'
+
+# target_not_have_a_wallet
+# %%0 = player name
+# %%1 = player uuid
+4F: '&c%%0 not have a wallet!'
