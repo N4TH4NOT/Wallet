@@ -433,38 +433,36 @@ public class CommandWallet
                     }
                     else if (var3.length > 2) { //upgrade <<player_name> <<level> [useMoney]|<useMoney>>
                         Player var4 = Bukkit.getPlayer(var3[1]);
-                        boolean var5;
                         if (var4 == null) this.a.c.sendMessage(var0,"10",0,var3[1]);
-                        else if (!Permission.a(var0,(var5 = Permission.a(var0,var4))?
-                                Permission.WALLET_UPGRADE : Permission.WALLET_UPGRADE_OTHERS))
+                        else if (!Permission.a(var0,Permission.WALLET_UPGRADE_OTHERS))
                             this.a.c.sendMessage(var0,"0F",0,"upgrade");
                         else {
-                            int var6;
-                            boolean var7 = false;
+                            int var5;
+                            boolean var6 = false;
                             try {
-                                var6 = Integer.parseInt(var3[2]);
-                                if (var6 < 0) {
+                                var5 = Integer.parseInt(var3[2]);
+                                if (var5 < 0) {
                                     this.a.c.sendMessage(var0,"11");
                                     return true;
                                 }
-                                if (var6 > this.a.a.getMaxLevel()) {
-                                    this.a.c.sendMessage(var0,"37",0,var3[2],var6);
+                                if (var5 > this.a.a.getMaxLevel()) {
+                                    this.a.c.sendMessage(var0,"37",0,var3[2],var5);
                                     return true;
                                 }
-                                else if (this.a.a(var4) > var6) {
-                                    this.a.c.sendMessage(var0,"4B",0,var6,Utilities.Wallet.b(var4));
+                                else if (this.a.a(var4) > var5) {
+                                    this.a.c.sendMessage(var0,"4B",0,var5,Utilities.Wallet.b(var4));
                                     return true;
                                 }
-                                else if (Utilities.Wallet.b(var4) == var6) {
-                                    if (Utilities.Wallet.b(var4) == this.a.a.getMaxLevel()) this.a.c.sendMessage(var0,"4A",0,var3[2],var6);
-                                    else this.a.c.sendMessage(var0,"4D",2,var4,var6);
+                                else if (Utilities.Wallet.b(var4) == var5) {
+                                    if (Utilities.Wallet.b(var4) == this.a.a.getMaxLevel()) this.a.c.sendMessage(var0,"4A",0,var3[2],var5);
+                                    else this.a.c.sendMessage(var0,"4D",2,var4,var5);
                                     return true;
                                 }
                                 if (var3.length > 3) {
                                     switch (var3[3].toLowerCase()) {
                                         case "true":
                                         case "yes":
-                                            var7 = true;
+                                            var6 = true;
                                         case "false":
                                         case "no":
                                             break;
@@ -475,15 +473,15 @@ public class CommandWallet
                                 }
                             }
                             catch (NumberFormatException ex) {
-                                if ((var6 = this.a.a(var4)) >= this.a.a.getMaxLevel()) {
+                                if ((var5 = this.a.a(var4)) >= this.a.a.getMaxLevel()) {
                                     this.a.c.sendMessage(var0,"39",2,var4,this.a.a.getMaxLevel());
                                     return true;
                                 }
-                                var6++;
+                                var5++;
                                 switch (var3[2].toLowerCase()) {
                                     case "true":
                                     case "yes":
-                                        var7 = true;
+                                        var6 = true;
                                     case "false":
                                     case "no":
                                         break;
@@ -492,26 +490,26 @@ public class CommandWallet
                                         return true;
                                 }
                             }
-                            Settings.LevelLimitation var8;
-                            if (!this.a.d.has(var4,(var8 = this.a.a.getLevel(var6)).getPrice()))
-                                this.a.c.sendMessage(var0,"2B",2,var4,var8.getPrice() - this.a.d.getBalance(var4));
+                            Settings.LevelLimitation var7;
+                            if (!this.a.d.has(var4,(var7 = this.a.a.getLevel(var5)).getPrice()))
+                                this.a.c.sendMessage(var0,"2B",2,var4,var7.getPrice() - this.a.d.getBalance(var4));
                             else {
-                                EconomyResponse var9;
-                                if (!var7 || (var9 = this.a.d.withdrawPlayer(var4,var8.getPrice())).transactionSuccess()) {
-                                    if (this.a.e.playerAdd(null,var4,Permission.WALLET_LV + (var6))) {
-                                        var4.getPersistentDataContainer().set(Utilities.Wallet.C, PersistentDataType.INTEGER,var6+1);
+                                EconomyResponse var8;
+                                if (!var6 || (var8 = this.a.d.withdrawPlayer(var4,var7.getPrice())).transactionSuccess()) {
+                                    if (this.a.e.playerAdd(null,var4,Permission.WALLET_LV + (var5))) {
+                                        var4.getPersistentDataContainer().set(Utilities.Wallet.C, PersistentDataType.INTEGER,var5+1);
                                         this.a.a(var4,0);
-                                        this.a.c.sendMessage(var0,"3B",2,var4,var6,var8.getCeiling());
-                                        if (!var5) this.a.c.sendMessage(var4,"3C",4,var0,var6,var8.getCeiling());
+                                        this.a.c.sendMessage(var0,"3B",2,var4,var5,var7.getCeiling());
+                                        if (!Permission.a(var0,var4)) this.a.c.sendMessage(var4,"3C",4,var0,var5,var7.getCeiling());
                                     }
                                     else {
-                                        if (var7 && !this.a.d.depositPlayer(var4,var8.getPrice()).transactionSuccess())
+                                        if (var6 && !this.a.d.depositPlayer(var4,var7.getPrice()).transactionSuccess())
                                             this.a.c.sendMessage(var0,"3D",2,var4);
                                         this.a.c.sendMessage(var0,"3E",2,var4);
                                     }
                                 }
-                                else if (var8.getPrice() <= 0) this.a.c.sendMessage(var0,"4E",0,var6);
-                                else this.a.c.sendMessage(var0,"3F",10,var4,var9);
+                                else if (var7.getPrice() <= 0) this.a.c.sendMessage(var0,"4E",0,var5);
+                                else this.a.c.sendMessage(var0,"3F",10,var4,var8);
                             }
                         }
                     }

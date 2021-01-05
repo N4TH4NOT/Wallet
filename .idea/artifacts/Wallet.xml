@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Wallet">
+    <output-path>$PROJECT_DIR$/out/artifacts/Wallet</output-path>
+    <root id="archive" name="Wallet.jar">
+      <element id="module-output" name="Eliaze-Wallet" />
+    </root>
+  </artifact>
+</component>

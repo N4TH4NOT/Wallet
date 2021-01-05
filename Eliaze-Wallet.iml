@@ -7,6 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="spigot-1.16.4.b2963" level="project" />
+    <orderEntry type="library" name="spigot-1.16.4.b2965" level="project" />
+    <orderEntry type="library" name="Vault-1.1(3-6).x-1.7.3" level="project" />
   </component>
 </module>

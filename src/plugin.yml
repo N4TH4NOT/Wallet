@@ -24,7 +24,7 @@ permissions:
       - wallet.withdraw.accounts
       - wallet.withdraw.banks
       - wallet.disabled
-      - wallet.upgrade.others
+      - wallet.upgrade.other
   wallet.give:
     description: Allows to give monay into to wallet of any player
   wallet.transfer:
@@ -61,7 +61,7 @@ permissions:
     description: No drop your money from you wallet when you die
   wallet.upgrade:
     description: Upgrade you wallet with money
-  wallet.upgrade.others:
+  wallet.upgrade.other:
     description: Upgrade your or others wallet with/without money from target
     children:
       - wallet.upgrade
