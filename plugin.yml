@@ -1,0 +1,68 @@
+name: Wallet
+main: me.n4th4not.wallet.Main
+version: 1.0
+author: N4TH4NOT
+api-version: 1.16
+description: Wallet pluginn and get physical money
+default-permission: false
+
+commands:
+  wallet:
+    usage: '/&7wallet&r [<&egive&r|&eclear&r> <&eplayer&r>&o [&e&oamount&r&o]&r|&etransfer&r <&esource_player&r> <&etarget_player&r>&o [&e&oamount&r&o]&r|&eupgrade&r&o [<&e&oplayer_name&r&o> <<&e&olevel&r&o> [&e&ouseMoney&r&o]|<&e&ouseMoney&r&o>]&r|<&edeposit&r|&ewithdraw&r> &r<&eplayer&r|&5bank&r <&5bank_name&r>> &o[&e&oamount&r&o]&r|&e&creload&r|&7help&r]'
+    description: Admin command to manage wallets
+
+permissions:
+  wallets:
+    description: Give all usefull permissions as admin
+    default: false
+    children:
+      - wallet.give
+      - wallet.clear
+      - wallet.transfer
+      - wallet.deposit.accounts
+      - wallet.deposit.banks
+      - wallet.withdraw.accounts
+      - wallet.withdraw.banks
+      - wallet.disabled
+      - wallet.upgrade.others
+  wallet.give:
+    description: Allows to give monay into to wallet of any player
+  wallet.transfer:
+    description: Allows to transfert the wallet money of any player to an other player
+  wallet.deposit.account:
+    description: Allows to deposit money from your wallet to your personnal account
+  wallet.deposit.bank:
+    description: Allows to deposit money from your wallet to a bank where you are a member
+  wallet.deposit.accounts:
+    description: Allows to deposit money from any wallet to a personnal account
+    children:
+      - wallet.deposit.account
+  wallet.deposit.banks:
+    description: Allows to deposit money from any wallet to any personnal bank account
+    children:
+      - wallet.deposit.bank
+  wallet.withdraw.account:
+    description: Allows to withdraw money from your personnal account to your wallet
+  wallet.withdraw.bank:
+    description: Allows to withdraw money from a bank where you are member to your wallet
+  wallet.withdraw.accounts:
+    description: Allows to withdraw money from any personnal account to your wallet
+    children:
+      - wallet.withdraw.account
+  wallet.withdraw.banks:
+    description: Allows to withdraw money from any bank to your wallet
+    children:
+      - wallet.withdraw.bank
+  wallet.clear:
+    description: Allows to withdraw a certain amount or all the money into any player wallet
+  wallet.disabled:
+    description: No wallet
+  wallet.safe:
+    description: No drop your money from you wallet when you die
+  wallet.upgrade:
+    description: Upgrade you wallet with money
+  wallet.upgrade.others:
+    description: Upgrade your or others wallet with/without money from target
+    children:
+      - wallet.upgrade
+# wallet.lv? -> wallet level [0,+oo[
